@@ -8,7 +8,7 @@ dependencies = [
     "asyncio>=4.0.0",
     "celery>=5.5.3",
     "dj-database-url>=3.0.1",
-    "django>=6.0.6",
+    "django>=6.0.7",
     "django-allauth>=65.14.1",
     "django-bootstrap5>=25.1",
     "django-widget-tweaks>=1.5.0",
@@ -27,6 +27,7 @@ dependencies = [
     "django-guardian>=3.2.0",
     "pydantic>=2.13.4",
     "anthropic>=0.117.0",
+    "pytest-asyncio>=1.4.0",
 ]
 
 
@@ -36,6 +37,7 @@ find = { where = [], include = ["apps/*", "config"] }
 [tool.pytest.ini_options]
 DJANGO_SETTINGS_MODULE = "config.settings"
 python_files = "test_*.py"
+asyncio_mode = "auto"
 
 [dependency-groups]
 dev = [
@@ -53,7 +55,7 @@ python_version = "3.12"
 
 plugins = ["mypy_django_plugin.main"]
 
-check_untyped_defs = false
+check_untyped_defs = true
 disallow_untyped_defs = false
 disallow_untyped_calls = true
 

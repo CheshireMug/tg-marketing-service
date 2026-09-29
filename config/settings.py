@@ -92,6 +92,9 @@ INSTALLED_APPS = [
     "apps.homepage",
     "apps.legal",
     "apps.ai",
+    "apps.blog",
+    "apps.billing",
+    "apps.admin.moderation",
 ]
 
 AUTHENTICATION_BACKENDS = [
